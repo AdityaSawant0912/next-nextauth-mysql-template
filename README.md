@@ -8,12 +8,6 @@ npx create-next-app -e https://github.com/AdityaSawant0912/next-nextauth-mysql-t
 
 ## Getting Started
 
-First, run the development server:
-```bash
-npm i
-```
-then,
-
 ```bash
 npm run dev
 # or

@@ -47,13 +47,13 @@ pnpm dev
 
 ## Database
 
-# Database Schema is saved in the root directory as "template.sql"
+### Database Schema is saved in the root directory as "template.sql"
 
-# Update the database credentials in the .env file
+### Update the database credentials in the .env file
 
 
 ## Next Auth
 
-# Update the credentials in the .env file
+### Update the credentials in the .env file
 
-# Do not change the NEXTAUTH_URL in the .env file. Unless you are using a custom domain.
+### Do not change the NEXTAUTH_URL in the .env file. Unless you are using a custom domain.

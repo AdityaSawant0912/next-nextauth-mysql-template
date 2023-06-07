@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with Next Auth and Mysql.
+
+## To clone this project
+
+```bash
+git clone https://github.com/AdityaSawant0912/next-nextauth-mysql-template.git
+```
 
 ## Getting Started
 
 First, run the development server:
+```bash
+npm i
+```
+then,
 
 ```bash
 npm run dev
@@ -12,27 +22,38 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Learn More about APIs
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# User API
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- GET http://localhost:3000/api/user - Redirects to GET http://localhost:3000/api/user/:userID
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- POST http://localhost:3000/api/user - Register User. Body: {firstName, lastName, email, password}
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- PUT http://localhost:3000/api/user - Reset user password. Body: {oldPassword, newPassword}
 
-## Learn More
+- DELETE http://localhost:3000/api/user - Redirects to DELETE http://localhost:3000/api/user/:userID
 
-To learn more about Next.js, take a look at the following resources:
+- GET http://localhost:3000/api/user/:userID - Get User by ID
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- PUT http://localhost:3000/api/user/:userID - Update User by ID. Body: {firstName, lastName}
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- DELETE http://localhost:3000/api/user/:userID - Delete User by ID. NOT IMPLEMENTED
 
-## Deploy on Vercel
+- GET http://localhost:3000/api/user/:userID/role - Get User Role by ID
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- PUT http://localhost:3000/api/user/:userID/role - Update User Role by ID. Body: {role}
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Database
+
+# Database Schema is saved in the root directory as "template.sql"
+
+# Update the database credentials in the .env file
+
+
+## Next Auth
+
+# Update the credentials in the .env file
+
+# Do not change the NEXTAUTH_URL in the .env file. Unless you are using a custom domain.

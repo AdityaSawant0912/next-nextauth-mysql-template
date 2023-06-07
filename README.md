@@ -1,9 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with Next Auth and Mysql.
 
-## To clone this project
+## Create Next App using this template
 
 ```bash
-git clone https://github.com/AdityaSawant0912/next-nextauth-mysql-template.git
+npx create-next-app -e https://github.com/AdityaSawant0912/next-nextauth-mysql-template [project-name]
 ```
 
 ## Getting Started
